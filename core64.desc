@@ -1,0 +1,23 @@
+# comment lines begin with a '#' 
+# comments and empty lines are ignored
+
+# Area and aspect ratios of blocks
+# Line Format: <unit-name>\t<area-in-m2>\t<min-aspect-ratio>\t<max-aspect-ratio>\t<rotable>
+	
+Icache	0.2e-6	1.25	1.25	1
+Dcache	0.2e-6	1.25	1.25	1
+Core	0.36e-6	1	1	1
+Router	0.24e-6	1.5	1.5	1
+Icache	0.2e-6	1.25	1.25	1
+Dcache	0.2e-6	1.25	1.25	1
+Core	0.36e-6	1	1	1
+Router	0.24e-6	1.5	1.5	1
+
+
+
+
+# Connectivity information
+# Line format <unit1-name>\t<unit2-name>\t<wire_density>
+Core	Router	1
+Core	Icache	1
+Core	Dcache	1

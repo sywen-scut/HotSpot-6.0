@@ -1,0 +1,48 @@
+# comment lines begin with a '#' 
+# comments and empty lines are ignored
+
+# Area and aspect ratios of blocks
+# Line Format: <unit-name>\t<area-in-m2>\t<min-aspect-ratio>\t<max-aspect-ratio>\t<rotable>
+
+Icache	0.320478e-6	1	3	1
+BTBuf	0.123663e-6	1	3	1
+Bpred	0.0651588e-6	1	5	1
+InstBuf	0.00882485e-6		1	3	1
+InstDecoder	0.00468731e-6	1	3	1
+Renaming	0.0160659e-6	1	3	1
+Dcache	0.328266e-6	1	3	1
+Itlb	0.0109629e-6	1	3	1
+Dtlb	0.0109629e-6	1	3	1
+RF	0.172904e-6	1	4	1
+InstScheduler	0.067561e-6	1	4	1
+ALUs	0.104135e-6	1	4	1
+FPU	0.971259e-6	1	3	1
+Mul	0.104135e-6	1	3	1
+
+Icache	0.320478e-6	1	3	1
+BTBuf	0.123663e-6	1	3	1
+Bpred	0.0651588e-6	1	5	1
+InstBuf	0.00882485e-6		1	3	1
+InstDecoder	0.00468731e-6	1	3	1
+Renaming	0.0160659e-6	1	3	1
+Dcache	0.328266e-6	1	3	1
+Itlb	0.0109629e-6	1	3	1
+Dtlb	0.0109629e-6	1	3	1
+RF	0.172904e-6	1	4	1
+InstScheduler	0.067561e-6	1	4	1
+ALUs	0.104135e-6	1	4	1
+FPU	0.971259e-6	1	3	1
+Mul	0.104135e-6	1	3	1
+# Connectivity information
+# Line format <unit1-name>\t<unit2-name>\t<wire_density>
+Bpred	BTBuf	1
+Bpred	Icache	1
+Icache	Itlb	1
+Dcache	Dtlb	1
+Icache	Dcache 	1
+Itlb	Dtlb	1
+RF	InstScheduler	1
+ALUs	FPU	1
+Mul	FPU	1
+FPU	RF	1
+

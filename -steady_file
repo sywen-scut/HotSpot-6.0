@@ -1,0 +1,15 @@
+Usage: ./hotspot -f <file> -p <file> [-o <file>] [-c <file>] [-d <file>] [options]
+A thermal simulator that reads power trace from a file and outputs temperatures.
+Options:(may be specified in any order, within "[]" means optional)
+   -f <file>	floorplan input file (e.g. ev6.flp) - overridden by the
+            	layer configuration file (e.g. layer.lcf) when the
+            	latter is specified
+   -p <file>	power trace input file (e.g. gcc.ptrace)
+  [-o <file>]	transient temperature trace output file - if not provided, only
+            	steady state temperatures are output to stdout
+  [-c <file>]	input configuration parameters from file (e.g. hotspot.config)
+  [-d <file>]	output configuration parameters to file
+  [options]	zero or more options of the form "-<name> <value>",
+           	override the options from config file. e.g. "-model_type block" selects
+           	the block model while "-model_type grid" selects the grid model
+  [-detailed_3D <on/off]>	Heterogeneous R-C assignments for specified layers. Requires a .lcf file to be specified
